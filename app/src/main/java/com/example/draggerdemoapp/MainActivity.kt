@@ -13,5 +13,6 @@ class MainActivity : AppCompatActivity() {
 
         smartPhone = DaggerSmartPhoneComponent.create().getSmartPhone()
         smartPhone.makeACall()
+
     }
 }
