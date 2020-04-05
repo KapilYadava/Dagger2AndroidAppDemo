@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        smartPhone = SmartPhone(Battery(), SimCard(ServiceProvider()), MemoryCard())
+        smartPhone = DaggerSmartPhoneComponent.create().getSmartPhone()
         smartPhone.makeACall()
     }
 }
