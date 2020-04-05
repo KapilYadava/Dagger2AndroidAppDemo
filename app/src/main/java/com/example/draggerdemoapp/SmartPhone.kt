@@ -13,8 +13,5 @@ class SmartPhone @Inject constructor(private val battery: Battery, val simCard: 
 
     fun makeACall(){
         Log.v(Utils.TAG,"Making a call ...")
-        battery.getBatteryState()
     }
-
-
 }

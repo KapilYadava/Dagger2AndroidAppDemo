@@ -1,15 +1,7 @@
 package com.example.draggerdemoapp
 
-import android.util.Log
-import javax.inject.Inject
 
-class Battery @Inject constructor(){
+interface Battery{
 
-    init {
-        Log.v(Utils.TAG, "Battery Constructed ...")
-    }
-
-    fun getBatteryState(){
-        Log.v(Utils.TAG, "battery charged!")
-    }
+    fun getBatteryState()
 }
