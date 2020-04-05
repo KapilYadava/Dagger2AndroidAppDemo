@@ -5,7 +5,7 @@ import android.util.Log
 import javax.inject.Inject
 
 
-class SmartPhone @Inject constructor(val battery: Battery, val simCard: SimCard, val memoryCard: MemoryCard){
+class SmartPhone @Inject constructor(private val battery: Battery, val simCard: SimCard, val memoryCard: MemoryCard){
 
     init {
         Log.v(Utils.TAG, "SmartPhone Constructed ...")
@@ -13,5 +13,8 @@ class SmartPhone @Inject constructor(val battery: Battery, val simCard: SimCard,
 
     fun makeACall(){
         Log.v(Utils.TAG,"Making a call ...")
+        battery.getBatteryState()
     }
+
+
 }
