@@ -1,14 +1,11 @@
 package com.example.draggerdemoapp
 
+import dagger.Binds
 import dagger.Module
-import dagger.Provides
 
 @Module
-class MobileBatteryModules {
+abstract class MobileBatteryModules {
 
-    @Provides
-    fun getMobileBattery(mobileBattery: MobileBattery): Battery{
-        mobileBattery.getBatteryState()
-        return mobileBattery
-    }
+    @Binds
+    abstract fun getMobileBattery(mobileBattery: MobileBattery): Battery
 }

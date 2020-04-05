@@ -9,9 +9,11 @@ class SmartPhone @Inject constructor(private val battery: Battery, val simCard: 
 
     init {
         Log.v(Utils.TAG, "SmartPhone Constructed ...")
+        battery.getBatteryState()
     }
 
     fun makeACall(){
         Log.v(Utils.TAG,"Making a call ...")
+
     }
 }
